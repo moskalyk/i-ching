@@ -36,3 +36,108 @@
     transform: rotate(360deg);
   }
 }
+
+
+@charset "UTF-8";
+body {
+  padding: 20px;
+  background: #f5e8dc;
+}
+
+@keyframes customAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.Line {
+  width: 216px;
+  height: 16px;
+  background: black;
+  margin: 8px 0;
+  position: relative;
+  animation: customAnimation 0.5s ease;
+  margin: auto;
+}
+.Line--changingBroken:before, .Line--changingSolid:before, .Line--unchangingBroken:before {
+  content: "";
+  width: 17px;
+  height: 16px;
+  background: #f5e8dc;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  margin-left: -8px;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+}
+.Line--changingBroken::before {
+  content: "✕";
+}
+.Line--changingSolid::before {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+#mainChingContainer,
+#evolvedChingContainer {
+  margin-bottom: 22px;
+  display: flex;
+  flex-direction: column-reverse;
+  height: 250px;
+}
+
+.row {
+  flex-direction: row;
+}
+
+.row .column {
+  width: 100%;
+  padding: 0 15px;
+}
+
+.is-hidden {
+  display: none;
+}
+
+h6 {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+p {
+  font-size: 14px;
+}
+
+button {
+  background: #333;
+  border: #333;
+}
+
+#throwbutton {
+  margin: 10px;
+  bottom: 0;
+  left: 0;
+      width: 100px;
+    height: 100px;
+    background: white;
+    font-size: 20px;
+}
+
+#reset {
+  margin: 10px;
+  bottom: 0;
+  left: 0;
+      width: 100px;
+    height: 100px;
+    background: white;
+    font-size: 20px;
+}
+#buttons .column {
+  /*display: flex;*/
+  justify-content: center;
+}
